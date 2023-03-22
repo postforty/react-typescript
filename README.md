@@ -11,6 +11,12 @@
 ## 프로젝트 생성
 + npx create-react-app ch04_1 --template typescript
 + npm i chance luxon @fontsource/material-icons
+  + chance: 가짜 데이터 제공
+  + luxon: 날짜를 '20분 전' 형태로 만들어 주는 기능 제공
 + npm i -D @types/chance @types/luxon
+  + chance, luxon을 타입스크립트에서 사용할 수 있게 함
 + npm i -D postcss autoprefixer tailwindcss @tailwindcss/line-clamp daisyui
 + npx tailwindcss init -p
+
+## 주요 용어
++ 웹팩(webpack)의 핫 모듈 교체(HMR: hot module replacement) ※ hot reloading라고도 함
