@@ -18,5 +18,28 @@
 + npm i -D postcss autoprefixer tailwindcss @tailwindcss/line-clamp daisyui
 + npx tailwindcss init -p
 
+## 테일윈드CSS 설정
+```
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.material-icons {
+  font-family: 'Material Icons';
+  display: inline-block;
+}
+```
+```
+// tailwind.config.js
+module.exports = {
+  content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
+  theme: {
+    extend: {}
+  },
+  plugins: [require('@tailwindcss/line-clamp'), require('daisyui')]
+}
+```
+
 ## 주요 용어
 + 웹팩(webpack)의 핫 모듈 교체(HMR: hot module replacement) ※ hot reloading라고도 함
