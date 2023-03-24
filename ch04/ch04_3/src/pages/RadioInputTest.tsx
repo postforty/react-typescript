@@ -1,9 +1,14 @@
-import {useMemo} from 'react'
+import {useCallback, useMemo, useState} from 'react'
+import type {ChangeEvent} from 'react'
 import {Title, Subtitle} from '../components'
 import * as D from '../data'
 
 export default function RadioInputTest() {
   const jobTitles = useMemo(() => D.makeArray(4).map(D.randomJobTitle), [])
+  const [selectedJobTitle, setSelectedJobTitle] = useState<string>(jobTitles[0])
+  const onChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+    setSelectedJobTitle(notUsed => e.target.value)
+  }, [])
   const radioInputs = useMemo(
     () =>
       jobTitles.map((value, index) => (
@@ -12,12 +17,13 @@ export default function RadioInputTest() {
             type="radio"
             name="jobs"
             className="mr-4 radio radio-primary"
+            checked={value === selectedJobTitle}
             defaultValue={value}
           />
           <span className="label-text">{value}</span>
         </label>
       )),
-    [jobTitles]
+    [jobTitles, selectedJobTitle, onChange]
   )
 
   return (
