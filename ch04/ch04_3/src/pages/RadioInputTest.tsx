@@ -19,6 +19,7 @@ export default function RadioInputTest() {
             className="mr-4 radio radio-primary"
             checked={value === selectedJobTitle}
             defaultValue={value}
+            onChange={onChange}
           />
           <span className="label-text">{value}</span>
         </label>
@@ -31,7 +32,7 @@ export default function RadioInputTest() {
       <Title>RadioInputTest</Title>
       <div className="flex flex-col justify-center p-4 mt-4">
         <Subtitle>What is your job?</Subtitle>
-        <Subtitle className="mt-4">Select Job: </Subtitle>
+        <Subtitle className="mt-4">Select Job: {selectedJobTitle}</Subtitle>
         <div className="flex justify-center p-4 mt-4">
           <div className="flex flex-col mt-4">{radioInputs}</div>
         </div>
