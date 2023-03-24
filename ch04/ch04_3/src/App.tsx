@@ -1,11 +1,11 @@
-import ArrayState from "./pages/ArrayState";
-import ObjectState from "./pages/ObjectState";
-import BasicForm from "./pages/BasicForm";
-import HigherOrderRadioInputTest from "./pages/HigherOrderRadioInputTest";
-import RadioInputTest from "./pages/RadioInputTest";
-import ShowHideModal from "./pages/ShowHideModal";
-import InputTest from "./pages/InputTest";
-import NumberState from "./pages/NumberState";
+import ArrayState from './pages/ArrayState'
+import ObjectState from './pages/ObjectState'
+import BasicForm from './pages/BasicForm'
+import HigherOrderRadioInputTest from './pages/HigherOrderRadioInputTest'
+import RadioInputTest from './pages/RadioInputTest'
+import ShowHideModal from './pages/ShowHideModal'
+import InputTest from './pages/InputTest'
+import NumberState from './pages/NumberState'
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       <InputTest />
       <NumberState />
     </main>
-  );
+  )
 }
 
-export default App;
+export default App
