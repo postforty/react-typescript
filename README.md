@@ -43,3 +43,6 @@ module.exports = {
 
 ## 주요 용어
 + 웹팩(webpack)의 핫 모듈 교체(HMR: hot module replacement) ※ hot reloading라고도 함
+
+## 더미 데이터
++ 랜덤 유저 API: https://randomuser.me/
