@@ -65,3 +65,6 @@ module.exports = {
    // ... 생략 ...
 }
 ```
++ extension
+  + ES7+ React/Redux/React-Native snippets
+    + 컴포넌트 코드 자동 완성: rafce
