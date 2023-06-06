@@ -49,5 +49,5 @@ module.exports = {
 
 # my-app
 ## 프로젝트 생성
-+ npx create-react-app my-app
++ npx create-react-app my-app --template typescript
 + 참고: https://create-react-app.dev/docs/getting-started
