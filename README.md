@@ -51,3 +51,17 @@ module.exports = {
 ## 프로젝트 생성
 + npx create-react-app my-app --template typescript
 + 참고: https://create-react-app.dev/docs/getting-started
++ tsconfig.json
+```
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": [
+       // ... 생략 ...
+      "es6"
+    ],
+    // ... 생략 ...
+  },
+   // ... 생략 ...
+}
+```
