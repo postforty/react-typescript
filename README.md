@@ -46,3 +46,8 @@ module.exports = {
 
 ## 더미 데이터
 + 랜덤 유저 API: https://randomuser.me/
+
+# my-app
+## 프로젝트 생성
++ npx create-react-app my-app
++ 참고: https://create-react-app.dev/docs/getting-started
