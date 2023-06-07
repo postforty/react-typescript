@@ -9,7 +9,7 @@
 //     menu: [{ name: "rose pasta", price: 2000, category: "PASTA" }],
 //   };
 
-export type Resturant = {
+export type restaurant = {
   name: string;
   category: string;
   address: Address;
@@ -19,7 +19,7 @@ export type Resturant = {
 export type Address = {
   city: string;
   detail: string;
-  zipCode: Number;
+  zipCode?: Number;
 };
 
 export type Menu = {
@@ -28,4 +28,14 @@ export type Menu = {
   category: string;
 };
 
-// 22분 부터
+export type AddressWithoutZip = Omit<Address, "zipCode">;
+export type ResturantOnlyCategor = Pick<restaurant, "category">;
+
+export type ApiResponse<T> = {
+  data: T[];
+  totalPage: number;
+  page: number;
+};
+
+export type RestaurantResponse = ApiResponse<restaurant>;
+export type MenuResponse = ApiResponse<Menu>;

@@ -1,8 +1,8 @@
 import React from "react";
-import { Address, Resturant } from "./model/resturant";
+import { Address, restaurant } from "./model/restaurant";
 
 interface OwnProps {
-  info: Resturant;
+  info: restaurant;
   changeAddress(address: Address): void;
 }
 

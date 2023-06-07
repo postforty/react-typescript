@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
 import Store from "./Store";
-import { Address, Resturant } from "./model/resturant";
+import { Address, restaurant } from "./model/restaurant";
+import BestMenu from "./BestMenu";
 
-let data: Resturant = {
+let data: restaurant = {
   name: "Dandy Restaurant",
   category: "western",
   address: {
@@ -14,14 +15,21 @@ let data: Resturant = {
   menu: [{ name: "rose pasta", price: 2000, category: "PASTA" }],
 };
 const App: React.FC = () => {
-  const [myRestaurant, setMyRestaurant] = useState<Resturant>(data);
+  const [myRestaurant, setMyRestaurant] = useState<restaurant>(data);
   const changeAddress = (address: Address) => {
     setMyRestaurant({ ...myRestaurant, address: address });
   };
-
+  const showBestMenuName = (name: string) => {
+    return name;
+  };
   return (
     <div className="App">
       <Store info={data} changeAddress={changeAddress} />
+      <BestMenu
+        name="pizza"
+        category="pizza"
+        showBestMenuName={showBestMenuName}
+      />
     </div>
   );
 };
